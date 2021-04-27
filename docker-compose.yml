@@ -1,0 +1,22 @@
+services:
+    ubuntu:
+        public: true
+        container_name: tzchz
+        image: imlala/ubuntu-xfce-vnc-novnc:latest
+        ports:
+            - 6080:6080
+        environment: 
+            - VNC_PASSWD=tzchz
+            - GEOMETRY=1280x768
+            - TZ=Asia/Shanghai
+            - DEPTH=24
+        volumes: 
+            - /root/Downloads
+            - /root/Desktop
+            - /data
+        resources:
+          cpu: 1000m
+          memory: 3072Mi
+          storage:
+            size: 4.5Gi
+            class: standard
