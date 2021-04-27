@@ -16,4 +16,4 @@ volumes:
 persistentVolume:
   enabled: true
   storageClass: standard
-  size: 30Gi
+  size: 4.5Gi
