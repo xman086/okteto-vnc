@@ -15,6 +15,24 @@ spec:
       containers:
       - image: imlala/ubuntu-xfce-vnc-novnc:latest
         name: ubuntu
+volumes: 
+  - /root/Downloads
+  - /root/Desktop
+environment:
+  - VNC_PASSWD=26418chz;
+  - GEOMETRY=1280x768
+  - DEPTH=24
+resources:
+  memory: "3072Mi"
+  cpu: "1000m"
+volumes: 
+  - /root/Downloads
+  - /root/Desktop
+  - /data
+persistentVolume:
+  enabled: true
+  storageClass: standard
+  size: 4.5Gi
 
 ---
 
