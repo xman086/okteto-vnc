@@ -1,0 +1,19 @@
+name: ubuntu-vnc
+image: imlala/ubuntu-xfce-vnc-novnc:latest
+environment:
+  - VNC_PASSWD=26418chz;
+  - GEOMETRY=1280x768
+  - DEPTH=24
+resources:
+  memory: "3072Mi"
+  cpu: "1000m"
+ports:
+  - 6080:6080
+volumes: 
+  - /root/Downloads
+  - /root/Desktop
+  - /data
+persistentVolume:
+  enabled: true
+  storageClass: standard
+  size: 30Gi
