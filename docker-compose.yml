@@ -11,9 +11,8 @@ services:
             - TZ=Asia/Shanghai
             - DEPTH=24
         volumes: 
-            - /root/Downloads
             - /root/Desktop
-            - /data
+            - /home
         resources:
           cpu: 1000m
           memory: 3072Mi
