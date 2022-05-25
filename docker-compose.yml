@@ -5,7 +5,7 @@ services:
         container_name: go
         image: imlala/ubuntu-xfce-vnc-novnc:latest
         ports:
-            - 5901:5901
+            - 53:53
             - 6080:6080
         environment: 
             - VNC_PASSWD=uncleluo
