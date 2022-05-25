@@ -1,9 +1,11 @@
 services:
     ubuntu:
         public: true
-        container_name: tzchz
+        privileged: true
+        container_name: go
         image: imlala/ubuntu-xfce-vnc-novnc:latest
         ports:
+            - 5901:5901
             - 6080:6080
         environment: 
             - VNC_PASSWD=uncleluo
@@ -15,7 +17,7 @@ services:
             - /home
         resources:
           cpu: 2000m
-          memory: 4096Mi
+          memory: 4Gi
           storage:
             size: 5Gi
             class: standard
